@@ -1,12 +1,15 @@
 #include <iostream>
-#include <string>
 
-extern int print_matrix(int[10][10]);
+extern char string_2d_copy(std::string[][2], std::string[][2], int);
 
 int main() {
+    
+    std::string first[3][2] = {{"a", "b"},{"c", "d"},{"e", "f"}};
+    std::string second[3][2];
+    int n = 3;
 
-    int array[10][10] = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,11}};
-    print_matrix(array);
-
+    string_2d_copy(first, second, n);
+    
     return 0;
 }
+ 
